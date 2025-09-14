@@ -8,11 +8,12 @@ async function loadLive() {
     const live = data.live;
 
     // Live Data ပြ
-    document.getElementById("liveStock").innerHTML = `
-      📌 SET: <b>${live.set}</b><br>
-      💰 Value: <b>${live.value}</b><br>
-      ⏰ Time: <b>${live.time}</b><br>
-      🎯 2D: <b style="color:red">${live.twod}</b>
+    document.getElementById("H2").innerHTML = `
+      SET: <b>${live.set}</b><br>
+    document.getElementById("H3").innerHTML = `
+      Value: <b>${live.value}</b><br>
+     document.getElementById("H1").innerHTML = `
+      2D: <b style="color:red">${live.twod}</b>
     `;
   } catch (error) {
     document.getElementById("liveStock").textContent =
