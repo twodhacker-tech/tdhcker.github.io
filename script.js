@@ -1,5 +1,5 @@
 async function loadLive() {
-  const url = "https://hackingtwod.onrender.com/";
+  const url = "https://api.thaistock2d.com/live";
   try {
     const response = await fetch(url);
     if (!response.ok) throw new Error("Network error: " + response.status);
