@@ -8,7 +8,7 @@
         document.getElementById("SET").innerHTML = `SET: ${data.live.set}`;
         document.getElementById("Value").innerHTML = `VALUE: ${data.live.value}`;
         document.getElementById("time").innerHTML = `TIME: ${data.live.time}`;
-        document.getElementById("Live").innerHTML = `2D: ${data.live.twod}`;
+        document.getElementById("Live").innerHTML = `${data.live.twod}`;
 
       } catch (err) {
         console.error("Fetch error:", err);
