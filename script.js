@@ -1,28 +1,20 @@
-async function loadLive() {
-  const url = "https://api.thaistock2d.com/live";
-  try {
-    const response = await fetch(url);
-    if (!response.ok) throw new Error("Network error: " + response.status);
+    async function loadLive() {
+      try {
+        const response = await fetch("https://api.thaistock2d.com/live");
+        const data = await response.json();
+        console.log("API Response:", data); // 👉 console ထဲမှာ data ကြည့်နိုင်မယ်
 
-    const data = await response.json();
-    const live = data.live;
+        // JSON ထဲက data ထုတ်ပြမယ်
+        document.getElementById("SET").innerHTML = `SET: ${data.live.set}`;
+        document.getElementById("Value").innerHTML = `VALUE: ${data.live.value}`;
+        document.getElementById("time").innerHTML = `TIME: ${data.live.time}`;
+        document.getElementById("Live").innerHTML = `2D: ${data.live.twod}`;
 
-    // Live Data ပြ
-    document.getElementById("H2").innerHTML = `
-      SET: <b>${live.set}</b>;
-    document.getElementById("H3").innerHTML = `
-      Value: <b>${live.value}</b>;
-     document.getElementById("H1").innerHTML = `.   2D: <b style="color:red">${live.twod}</b>
-    `;
-  } catch (error) {
-    document.getElementById("liveStock").textContent =
-      "⚠️ Could not load live data.";
-    console.error("Fetch error:", error);
-  }
-}
+      } catch (err) {
+        console.error("Fetch error:", err);
+        document.getElementById("Live").textContent = "⚠️ Could not load data.";
+      }
+    }
 
-// ပထမဆုံးခေါ်
-loadLive();
-
-// ၃ စက္ကန့်တစ်ကြိမ် refresh
-setInterval(loadLive, 3000);
+    loadLive();
+    setInterval(loadLive, 3000); // 3 sec auto refresh
