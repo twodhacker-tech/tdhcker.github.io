@@ -7,8 +7,10 @@
 </head>
 <body>
   <h1>Check Thai Stock 2D Live API</h1>
-  <div id="liveStock">Loading...</div>
-
+  <div id="time">Loading...</div>
+  <div id="Live">Loading...</div>
+  <div id="SET">Loading...</div>
+  <div id="Value">Loading...</div>
   <script>
     async function loadLive() {
       try {
@@ -17,12 +19,15 @@
         console.log("API Response:", data); // 👉 ဒီထဲမှာ JSON ပြန်လာမလာ console ထဲကြည့်မယ်
 
         // Live JSON ထဲက "set" ပြမယ်
-        document.getElementById("liveStock").innerHTML = `
-          SET: ${data.live.set} <br>
-          VALUE: ${data.live.value} <br>
-          TIME: ${data.live.time} <br>
-          2D: ${data.live.twod}
-        `;
+        document.getElementById("SET").innerHTML = `
+          SET: ${data.live.set};
+        document.getElementById("Value").innerHTML = `
+          VALUE: ${data.live.value};
+        document.getElementById("time").innerHTML = 
+          TIME: ${data.live.time};
+        document.getElementById("Live").innerHTML =
+          2D: ${data.live.twod};
+      
       } catch (err) {
         console.error("Fetch error:", err);
         document.getElementById("liveStock").textContent = "⚠️ Could not load data.";
