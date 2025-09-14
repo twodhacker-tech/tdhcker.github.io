@@ -9,9 +9,9 @@ async function loadLive() {
 
     // Live Data ပြ
     document.getElementById("H2").innerHTML = `
-      SET: <b>${live.set}</b><br>
+      SET: <b>${live.set}</b>;
     document.getElementById("H3").innerHTML = `
-      Value: <b>${live.value}</b><br>
+      Value: <b>${live.value}</b>;
      document.getElementById("H1").innerHTML = `.   2D: <b style="color:red">${live.twod}</b>
     `;
   } catch (error) {
