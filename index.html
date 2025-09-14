@@ -11,31 +11,28 @@
   <div id="Live">Loading...</div>
   <div id="SET">Loading...</div>
   <div id="Value">Loading...</div>
+
   <script>
     async function loadLive() {
       try {
         const response = await fetch("https://api.thaistock2d.com/live");
         const data = await response.json();
-        console.log("API Response:", data); // 👉 ဒီထဲမှာ JSON ပြန်လာမလာ console ထဲကြည့်မယ်
+        console.log("API Response:", data); // 👉 console ထဲမှာ data ကြည့်နိုင်မယ်
 
-        // Live JSON ထဲက "set" ပြမယ်
-        document.getElementById("SET").innerHTML = `
-          SET: ${data.live.set};
-        document.getElementById("Value").innerHTML = `
-          VALUE: ${data.live.value};
-        document.getElementById("time").innerHTML = 
-          TIME: ${data.live.time};
-        document.getElementById("Live").innerHTML =
-          2D: ${data.live.twod};
-      
+        // JSON ထဲက data ထုတ်ပြမယ်
+        document.getElementById("SET").innerHTML = `SET: ${data.live.set}`;
+        document.getElementById("Value").innerHTML = `VALUE: ${data.live.value}`;
+        document.getElementById("time").innerHTML = `TIME: ${data.live.time}`;
+        document.getElementById("Live").innerHTML = `2D: ${data.live.twod}`;
+
       } catch (err) {
         console.error("Fetch error:", err);
-        document.getElementById("liveStock").textContent = "⚠️ Could not load data.";
+        document.getElementById("Live").textContent = "⚠️ Could not load data.";
       }
     }
 
     loadLive();
-    setInterval(loadLive, 3000);
+    setInterval(loadLive, 3000); // 3 sec auto refresh
   </script>
 </body>
 </html>
