@@ -12,8 +12,7 @@ async function loadLive() {
       SET: <b>${live.set}</b><br>
     document.getElementById("H3").innerHTML = `
       Value: <b>${live.value}</b><br>
-     document.getElementById("H1").innerHTML = `
-      2D: <b style="color:red">${live.twod}</b>
+     document.getElementById("H1").innerHTML = `.   2D: <b style="color:red">${live.twod}</b>
     `;
   } catch (error) {
     document.getElementById("liveStock").textContent =
