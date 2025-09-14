@@ -3,23 +3,31 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Live Stock Data</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Thai Stock 2D Live</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f6f9;
+      text-align: center;
+      padding: 40px;
+    }
+    #liveStock {
+      font-size: 1.3em;
+      margin-top: 20px;
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      display: inline-block;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+  </style>
 </head>
 <body>
 
-  <header>
-    <h1>📊 Thai Stock 2D Live</h1>
-  </header>
+  <h1>📊 Thai Stock 2D Live</h1>
+  <p>အလိုအလျောက် ၃ စက္ကန့်တိုင်း Refresh ဖြစ်မယ်</p>
 
-  <section>
-    <h2>Current Live Data (Refresh every 3s)</h2>
-    <p id="liveStock">Loading...</p>
-  </section>
-
-  <footer>
-    <p>© 2025 My Portfolio</p>
-  </footer>
+  <div id="liveStock">Loading...</div>
 
   <script src="script.js"></script>
 </body>
