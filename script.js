@@ -7,22 +7,22 @@ async function loadLive() {
     const data = await response.json();
     const live = data.live;
 
-    // Show SET, Value, Time, 2D
+    // Live Data ပြ
     document.getElementById("liveStock").innerHTML = `
       📌 SET: <b>${live.set}</b><br>
       💰 Value: <b>${live.value}</b><br>
       ⏰ Time: <b>${live.time}</b><br>
-      🎯 2D: <b>${live.twod}</b>
+      🎯 2D: <b style="color:red">${live.twod}</b>
     `;
   } catch (error) {
-    console.error("Fetch error:", error);
     document.getElementById("liveStock").textContent =
       "⚠️ Could not load live data.";
+    console.error("Fetch error:", error);
   }
 }
 
-// Load once and auto-refresh every 3s
-window.onload = () => {
-  loadLive();
-  setInterval(loadLive, 3000);
-};
+// ပထမဆုံးခေါ်
+loadLive();
+
+// ၃ စက္ကန့်တစ်ကြိမ် refresh
+setInterval(loadLive, 3000);
