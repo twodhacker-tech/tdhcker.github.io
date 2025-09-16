@@ -12,9 +12,9 @@
 
       } catch (err) {
         console.error("Fetch error:", err);
-        document.getElementById("Live").textContent = "⚠️ Could not load data.";
+        document.getElementById("Live").textContent = "⚠️ Could not load sever.";
       }
     }
 
     loadLive();
-    setInterval(loadLive, 3000); // 3 sec auto refresh
+    setInterval(loadLive, 4000); // 4 sec auto refresh
