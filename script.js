@@ -12,7 +12,7 @@
 
       } catch (err) {
         console.error("Fetch error:", err);
-        document.getElementById("Live").textContent = "⚠️ Could not load sever.";
+        document.getElementById("Live").textContent = "⚠️ can not Connected to sever";
       }
     }
 
