@@ -10,9 +10,9 @@
         document.getElementById("time").innerHTML = `TIME: ${data.live.time}`;
         document.getElementById("Live").innerHTML = `${data.live.twod}`;
 
-      } catch (err) {
+      } catch (err) {p
         console.error("Fetch error:", err);
-        document.getElementById("Live").textContent = "⚠️ can not Connected to sever";
+        document.getElementById("Live").textContent = "--";
       }
     }
 
