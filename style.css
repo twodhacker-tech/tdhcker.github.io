@@ -10,7 +10,7 @@
       color: #0066cc;
     }
 
-    #time, #Live, #SET, #Value {
+    #time, #SET, #Value {
       margin: 10px auto;
       padding: 15px;
       width: 250px;
@@ -18,6 +18,16 @@
       background: #ffffff;
       box-shadow: 0 2px 5px rgba(0,0,0,0.2);
       font-size: 18px;
+    }
+    #Live{
+      margin: 10px auto;
+      padding: 15px;
+      width: 500px;
+      high:500px;
+      border-radius: 8px;
+      background: #ffffff;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+      font-size: 120px;
     }
 
     #Live { background: #e8f5e9; }   /* greenish */
