@@ -1,6 +1,6 @@
     async function loadLive() {
       try {
-        const response = await fetch("https://hackingtwod.onrender.com");
+        const response = await fetch("https://api.thaistock2d.com/live");
         const data = await response.json();
         console.log("API Response:", data); // 👉 console ထဲမှာ data ကြည့်နိုင်မယ်
 
