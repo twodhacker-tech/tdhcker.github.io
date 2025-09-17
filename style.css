@@ -14,21 +14,21 @@
       margin: 10px auto;
       padding: 15px;
       width: 500px;
-      high:500px;
+      hight:200px;
       border-radius: 8px;
       background: #ffffff;
       box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-      font-size: 30px;
+      font-size: 40px;
     }
     #Live{
       margin: 10px auto;
       padding: 15px;
       width: 500px;
-      high:500px;
+      hight:500px;
       border-radius: 8px;
       background: #ffffff;
       box-shadow: 0 10px 15px rgba(0,0,0,0.2);
-      font-size: 60px;
+      font-size: 80px;
     }
 
     #Live { background: #e8f5e9; }   /* greenish */
