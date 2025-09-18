@@ -17,4 +17,4 @@
     }
 
     loadLive();
-    setInterval(loadLive, 4000); // 4 sec auto refresh
+    setInterval(loadLive, 1000); // 1 sec auto refresh
